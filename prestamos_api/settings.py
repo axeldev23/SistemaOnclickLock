@@ -191,3 +191,11 @@ AWS_DEFAULT_ACL = None
 AWS_S3_VERIFY = True
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
+import os
+if os.environ.get("AUTO_CREATE_SUPERUSER") == "true":
+    try:
+        import create_superuser
+    except Exception as e:
+        print(f"Error creando superusuario: {e}")
+
+
