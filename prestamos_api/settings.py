@@ -165,9 +165,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CORS_ALLOWED_ORIGINS = [
-    "https://gestionprestamos-client.onrender.com",
-    "http://localhost:5173",
+    "https://frontonclicklock.onrender.com",  # <--- ¡ESTE ES TU FRONT ACTUAL!
+    "http://localhost:5173",                  # para desarrollo local
 ]
+
 
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
