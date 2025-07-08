@@ -336,7 +336,7 @@ def enviar_sms(request):
         # Enviar el mensaje usando Twilio
         message = client.messages.create(
             body=mensaje,
-            from_=os.getenv('TWILIO_PHONE_NUMBER'),  # Número de Twilio desde entorno
+            from_=config('TWILIO_PHONE_NUMBER'),  # Número de Twilio desde entorno
             to=numero_telefono  # Ahora el número está asegurado con el prefijo +52
         )
 
